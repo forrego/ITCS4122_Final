@@ -6,6 +6,7 @@ from vega_datasets import data
 import prepocessor,helper
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+from PIL import Image
 
 
 st.sidebar.image('https://www.cdc.gov/media/dpk/diseases-and-conditions/coronavirus/images/outbreak-coronavirus-world-1024x506px.jpg?_=31301')
@@ -129,6 +130,25 @@ if st.sidebar.checkbox('Show Choropleth Map'):
                              ('Total Positive', 'Total Negative'))
     ch_map(selection)
 #---------------------------------------------------------------------------
+
+
+
+
+#---------------------------------------------------------------------------
+#LULU'S PICS - EXTRA VISUALIZATIONS (Linear Regression)
+if st.sidebar.checkbox('More Visualizations'):  
+  
+    image1 = Image.open('pictures/1.png')
+    image2 = Image.open('pictures/2.png')
+    image3 = Image.open('pictures/3.png')
+    image4 = Image.open('pictures/4.png')
+    
+    st.image(image1, caption="")
+    st.image(image2, caption="")
+    st.image(image3, caption="")
+    st.image(image4, caption="")
+#---------------------------------------------------------------------------
+
 
 
 
